@@ -8,4 +8,4 @@ security:
   
   
 # MongoD connection string
-# mongod --config "/shared/config"
+# mongod --config "/shared/config.yaml"

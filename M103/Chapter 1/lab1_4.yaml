@@ -1,3 +1,5 @@
+# config file
+
 storage:
   dbPath: "/var/mongodb/db"
 net:
@@ -12,4 +14,7 @@ systemLog:
 processManagement:
   fork: true
 operationProfiling:
-  slowOpThresholdMs: 50
+  slowOpThresholdMs: 50  
+  
+# MongoD connection string
+# mongod --config "/shared/config.yaml"
