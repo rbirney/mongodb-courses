@@ -41,3 +41,5 @@ db.movies.aggregate([
     }
   }
 ]).itcount()
+
+// answer is 8068

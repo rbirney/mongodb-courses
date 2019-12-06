@@ -56,3 +56,5 @@ db.movies.aggregate([
     $limit: 1
   }
 ])
+
+// Answer: The Heat

@@ -3,8 +3,6 @@
 //rated is either "PG" or "G"
 //languages contains "English" and "Japanese"
 
-//db.movies.aggregate(pipeline).itcount()
-
 var pipeline = [{$match:{
 	$and: [ 
 		{ "imdb.rating": { $gte: 7 } }, 
@@ -14,4 +12,17 @@ var pipeline = [{$match:{
 	] 
 }}]
 
+// To check documents returned (should be 23)
 
+db.movies.aggregate(pipeline).itcount()
+
+// Load validation script
+// Remember to run Mongo shell from folder where file is located
+
+load('validateLab1.js')
+
+// Run validation method
+
+validateLab1(pipeline)
+
+// Answer is 15

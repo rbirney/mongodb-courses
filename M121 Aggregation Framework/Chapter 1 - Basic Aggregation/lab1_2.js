@@ -19,4 +19,12 @@ var pipeline = [
 }}
 ]
 
+// load validation script
 
+load('./validateLab2.js')
+
+// run validation method
+
+validateLab2(pipeline)
+
+// answer is 15
