@@ -1,0 +1,23 @@
+# Change ownership of "var" directory to vagrant:vagrant
+# sudo chown vagrant:vagrant var
+
+# Make the /var/mongodb/db directory
+# sudo mkdir /var/mongodb/db/
+
+# Fix problems
+
+# rm -r /var/mongodb/db
+# sudo chown -R vagrant:vagrant /var/mongodb
+# mkdir -p /var/mongodb/db
+
+storage:
+  dbPath: "/var/mongodb/db"
+net:
+  bindIp : "127.0.0.1,192.168.103.100"
+  port: 27000
+security:
+  authorization: "enabled"
+  
+  
+# MongoD connection string
+# mongod --config "/shared/config.yaml"

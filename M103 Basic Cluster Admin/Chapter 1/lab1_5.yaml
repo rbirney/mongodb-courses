@@ -1,0 +1,21 @@
+# Log in as m103-admin user
+
+mongo --port 27000 -u "m103-admin" -p "m103-pass" --authenticationDatabase "admin"
+
+# Create new user
+# The requirements for this new user are:
+
+# Role: readWrite on applicationData database
+# Authentication source: admin
+# Username: m103-application-user
+# Password: m103-application-pass
+
+use admin
+
+db.createUser({
+  user: "m103-application-user",
+  pwd: "m103-application-pass",
+  roles: [
+    {role: "readWrite", db: "applicationData"}
+  ]
+})
